@@ -40,17 +40,17 @@ const ClientLogin = () => {
     }
   };
 
-  const handleConnect = async(connected, setConnected) => {
-    let x = await connect();
-    console.log("Value of X is "+x);
-    if(x == true){
-      console.log("Andar to aya hai ")
-      navigate('/client')
-    }
+  const handleConnect = async (connected, setConnected) => {
+    // let x = await connect();
+    // console.log("Value of X is "+x);
+    // if(x == true){
+    //   console.log("Andar to aya hai ")
+    navigate('/client')
+    // }
   };
   useEffect(() => {
-    loadWeb3();
-    setPublicKey(loadAccount());
+    // loadWeb3();
+    // setPublicKey(loadAccount());
   }, []);
 
 

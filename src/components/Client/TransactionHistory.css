@@ -21,13 +21,13 @@
 .transaction-row {
     display: flex;
     justify-content: space-between;
-    padding: 10px 0;
+    padding: 10px 20px;
 }
 
 .transaction-item {
     flex: 3;
     color: #fff;
-    margin-left: 3vw;
+    margin-left: 2vw;
     font-weight: bold;
     font-size: 25px;
 }

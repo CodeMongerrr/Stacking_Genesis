@@ -4,14 +4,25 @@ import './TransactionHistory.css';
 import Transaction from './Transaction';
 
 const transactions = [
-  { title: "Purchase", amount: "$120", date: "15/09/23" },
-  { title: "Withdrawal", amount: "$85", date: "18/09/23" },
-  { title: "Payment", amount: "$200", date: "22/09/23" },
-  { title: "Deposit", amount: "$150", date: "25/09/23" },
-  { title: "Purchase", amount: "$100", date: "28/09/23" },
-  { title: "Withdrawal", amount: "$75", date: "03/10/23" },
-  { title: "Payment", amount: "$180", date: "08/10/23" },
-  { title: "Deposit", amount: "$250", date: "12/10/23" }
+  { title: "Mint", amount: "10 NFTs", date: "2023-09-15" },
+  { title: "Stake", amount: "5 NFTs", date: "2023-09-18" },
+  { title: "BatchStake", amount: "20 NFTs", date: "2023-09-22" },
+  { title: "Claim", amount: "100 USDTs", date: "2023-09-25" },
+  { title: "Mint", amount: "15 NFTs", date: "2023-09-28" },
+  { title: "Withdraw", amount: "5 NFTs", date: "2023-10-03" },
+  { title: "Stake", amount: "10 NFTs", date: "2023-10-08" },
+  { title: "BatchStake", amount: "25 NFTs", date: "2023-10-12" },
+  { title: "Claim", amount: "150 USDTs", date: "2023-10-16" },
+  { title: "Mint", amount: "20 NFTs", date: "2023-10-20" },
+  { title: "Withdraw", amount: "10 NFTs", date: "2023-10-24" },
+  { title: "Stake", amount: "15 NFTs", date: "2023-10-28" },
+  { title: "BatchStake", amount: "30 NFTs", date: "2023-11-01" },
+  { title: "Claim", amount: "200 USDTs", date: "2023-11-05" },
+  { title: "Mint", amount: "25 NFTs", date: "2023-11-08" },
+  { title: "Withdraw", amount: "15 NFTs", date: "2023-11-12" },
+  { title: "Stake", amount: "20 NFTs", date: "2023-11-16" },
+  { title: "BatchStake", amount: "35 NFTs", date: "2023-11-20" },
+  { title: "Claim", amount: "250 USDTs", date: "2023-11-24" },
 ];
 
 const TransactionHistory = () => {

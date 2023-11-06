@@ -17,13 +17,13 @@ import { NFTn, countdown, loadContract, mintNFT, getStakedNFTs, StakeNFT, nStake
 import CardX from './CardX';
 import { Popup } from './Popup';
 const ClientPortal = () => {
-  const [publicKey, setPublicKey] = useState('');
-  const [nnft, setnnft] = useState(0);
+  const [publicKey, setPublicKey] = useState('0xDb1cd93e3924048EcfcBD66B6b81290FB9A508d6');
+  const [nnft, setnnft] = useState(7);
   const [Time, setTime] = useState([])
-  const [nstakednfts, setnstakednfts] = useState(0);
+  const [nstakednfts, setnstakednfts] = useState(2);
   const [stakedNFTs, setStakedNFTs] = useState([])
   const [open, setOpen] = useState(true);
-
+  const [roi, setroi] = useState(314)
   const handleConnect = async () => {
     const acc = await loadAccount();
     setPublicKey(acc);
@@ -49,10 +49,10 @@ const ClientPortal = () => {
     setnstakednfts(await nStakedNFTs());
   }
   useEffect(() => {
-    loadWeb3();
-    loadContract();
-    fetch();
-    handleConnect();
+    // loadWeb3();
+    // loadContract();
+    // fetch();
+    // handleConnect();
   }, []);
 
   return (
@@ -82,7 +82,7 @@ const ClientPortal = () => {
           </nav>
           <Cards width="30vw" height="200px" title="Total Value Locked in-" titleFontSize="18px" content={nnft + ",000 USDTs"} contentFontSize="40px" />
           <Cards width="20vw" height="200px" title="Number of NFTs-" titleFontSize="18px" content={nnft + " NFTs"} contentFontSize="40px" />
-          <Cards width="30vw" height="200px" title="ROI Claimed-" titleFontSize="18px" content="$ 0" contentFontSize="40px" />
+          <Cards width="30vw" height="200px" title="ROI Claimed-" titleFontSize="18px" content={"$ "+ roi} contentFontSize="40px" />
           <Cards width="20vw" height="200px" title="Staked NFTs-" titleFontSize="18px" content={nstakednfts} contentFontSize="40px" />
 
 
