@@ -1,0 +1,46 @@
+.card-container {
+    display: flex;
+    justify-content: center;
+
+}
+
+.card {
+    width: 300px;
+    height: 200px;
+    background-color: #0d0d0d;
+    border-radius: 30px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    perspective: 1000px;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    transition: transform 0.3s;
+    float: left;
+}
+
+.content {
+    margin-left: 3vw;
+
+}
+
+.content h2 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 24px;
+    color: #fff;
+}
+
+.content p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.card:hover {
+    transform: rotateY(5deg) translateX(2px) translateY(-2px);
+}
+
+.card:active {
+    transform: rotateY(0deg) translateX(0) translateY(0);
+}
