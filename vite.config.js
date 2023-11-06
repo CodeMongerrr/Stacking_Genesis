@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     lib: {
-      entry: resolve(__dirname, "src/lib/index.js"),
+      entry:  "./src/lib/index.js",
       name: "core-package",
       fileName: "index",
     },
