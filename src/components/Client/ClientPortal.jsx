@@ -58,10 +58,10 @@ const ClientPortal = () => {
   return (
     <div className="bg-primary overflow-hidden">
       <div className={`${styles.paddingX} ${styles.flexCenter} h-[100%]`}>
-        <div className={`${styles.boxWidth}`}>
+        <div className={`${styles.boxWidthdiff}`}>
           <nav className="w-full flex py-6 justify-between items-center navbar">
             <Link to="/">
-              <img src={logo} alt="Stacked Genesis" className="w-[30vw] h-[10vw] pt-[1vw] ml-[2vw] max-w-[200px]" />
+              <img src={logo} alt="Stacked Genesis" className="w-[30vw] h-[10vw] pt-[1vw] ml-[2vw] max-w-[250px]" />
             </Link>
             <ul className="list-none sm:flex hidden justify-end items-center flex-1">
               <li
