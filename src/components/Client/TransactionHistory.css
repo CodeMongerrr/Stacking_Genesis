@@ -1,6 +1,6 @@
-.transaction-history {
+.transactionh {
     width: 100%;
-    padding: 10px;
+    /* padding: 1vw; */
 }
 .dropdown-content {
     max-height: 0;
@@ -11,17 +11,18 @@
     max-height: 500px; /* Adjust the max-height as needed */
 }
 .title {
-    font-size: 40px;
+    font-size: 3vw;
     font-weight: bold;
     color: #fff;
     margin-left: 3vw;
-    margin-bottom: 2vw;
+    margin-bottom: 2vh;
+    margin-top: 3.5vw;
 }
 
 .transaction-row {
     display: flex;
     justify-content: space-between;
-    padding: 10px 20px;
+    padding: 1vw 2vw;
 }
 
 .transaction-item {
@@ -29,24 +30,23 @@
     color: #fff;
     margin-left: 2vw;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 2vw;
 }
 .transaction-item-amount {
     flex: 1;
     color: #189100;
-    margin-left: 3vw;
+    /* margin-left: 3vw; */
     font-weight: bold;
-    font-size: 25px;
+    font-size: 2vw;
 }
 
 .card {
-    width: 86vw;
+    width: 90vw;
     background-color: #1e1e1e;
-    border-radius: 30px;
+    border-radius: 3vw;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-    perspective: 1000px;
-    margin: 20px;
-    display: flex;
+    /* perspective: 1000px; */
+    margin: 1vw;
     align-items: center;
     /* justify-content: center; */
     transition: transform 0.3s;

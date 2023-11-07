@@ -12,7 +12,10 @@
 
 .notConnected{
     text-align: center;
-    font-size: 50px;
+    font-size: 5vw;
     font-weight: bold;
     color: #fff;
+    width: '50vw';
+    padding: 50px;
+    padding-top: 200px;
 }

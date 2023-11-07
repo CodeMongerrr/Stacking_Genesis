@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from "../../style";
 import Navbar from '../Navbar';
-import { logo } from "../../assets"
+import { logo } from "../../assets";
 import Button from '../Button';
 import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
@@ -12,6 +12,7 @@ import { loadAccount, loadWeb3, signMessage } from '../../functions';
 import NavBar from '../Client/NavBar';
 import { useEffect } from 'react';
 import "./ClientLogin.css";
+
 const ClientLogin = () => {
   const navigate = useNavigate();
   const [connected, setConnected] = useState(true);
@@ -56,7 +57,7 @@ const ClientLogin = () => {
 
 
   return (
-    <div className="bg-primary w-full overflow-hidden">
+    <div className="bg-primary w-full h-screen overflow-hidden">
       <div className={`${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
           <nav className="w-full flex py-6 justify-between items-center navbar">
@@ -64,19 +65,24 @@ const ClientLogin = () => {
               <img src={logo} alt="Stacked Genesis" className="w-[200px] h-[52px] pt-[10px]" />
             </Link>
             <ul className="list-none sm:flex hidden justify-end items-center flex-1">
-              <li
-                className={`font-poppins font-normal cursor-pointer text-[16px] text-white mr-10`}
-              >
+              <li className={`font-poppins font-normal cursor-pointer text-[16px] text-white mr-10`}>
                 <div onClick={handleConnect}>
                   <Button buttonText={"Connect Wallet"} />
                 </div>
               </li>
             </ul>
+            <div className="sm:hidden flex flex-1 justify-end items-center">
+              <div onClick={handleConnect}>
+                <Button buttonText={"Connect Wallet"} />
+              </div>
+            </div>
           </nav>
-          <div className='notConnected'>You cannot access this Portal unless you are Signed in</div>
+          <div className='notConnected' >You cannot access this Portal unless you are Signed in</div>
         </div>
       </div>
     </div>
   )
 }
+
+
 export default ClientLogin;

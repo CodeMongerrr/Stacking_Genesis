@@ -1,4 +1,4 @@
-import React from 'react'
+  import React from 'react'
 import styles from "../../style";
 import Navbar from '../Navbar';
 import { logo } from "../../assets"
@@ -56,12 +56,12 @@ const ClientPortal = () => {
   }, []);
 
   return (
-    <div className="bg-primary w-full overflow-hidden">
-      <div className={`${styles.paddingX} ${styles.flexCenter}`}>
+    <div className="bg-primary overflow-hidden">
+      <div className={`${styles.paddingX} ${styles.flexCenter} h-[100%]`}>
         <div className={`${styles.boxWidth}`}>
           <nav className="w-full flex py-6 justify-between items-center navbar">
             <Link to="/">
-              <img src={logo} alt="Stacked Genesis" className="w-[200px] h-[52px] pt-[10px]" />
+              <img src={logo} alt="Stacked Genesis" className="w-[30vw] h-[10vw] pt-[1vw] ml-[2vw] max-w-[200px]" />
             </Link>
             <ul className="list-none sm:flex hidden justify-end items-center flex-1">
               <li
@@ -79,23 +79,28 @@ const ClientPortal = () => {
 
               </li>
             </ul>
+            <div className="sm:hidden flex flex-1 justify-end items-center">
+              <div className="user-card">
+              <Button buttonText={publicKey} />
+              </div>
+            </div>
           </nav>
-          <Cards width="30vw" height="200px" title="Total Value Locked in-" titleFontSize="18px" content={nnft + ",000 USDTs"} contentFontSize="40px" />
-          <Cards width="20vw" height="200px" title="Number of NFTs-" titleFontSize="18px" content={nnft + " NFTs"} contentFontSize="40px" />
-          <Cards width="30vw" height="200px" title="ROI Claimed-" titleFontSize="18px" content={"$ "+ roi} contentFontSize="40px" />
-          <Cards width="20vw" height="200px" title="Staked NFTs-" titleFontSize="18px" content={nstakednfts} contentFontSize="40px" />
+          <Cards width="32vw" height="13vw" title="Total Value Locked in-" titleFontSize="1vw" content={nnft + ",000 USDTs"} contentFontSize="2vw" />
+          <Cards width="22vw" height="13vw" title="Number of NFTs-" titleFontSize="1vw" content={nnft + " NFTs"} contentFontSize="2vw" />
+          <Cards width="32vw" height="13vw" title="ROI Claimed-" titleFontSize="1vw" content={"$ "+ roi} contentFontSize="2vw" />
+          <Cards width="22vw" height="13vw" title="Staked NFTs-" titleFontSize="1vw" content={nstakednfts} contentFontSize="2vw" />
 
 
           {
             !(nnft - nstakednfts) ? (
               <>
-                <Cards width="20vw" height="200px" title="Unstaked NFTs" titleFontSize="18px" content={" " + (nnft - nstakednfts)} contentFontSize="40px" />
-                <CardX buttonMargin="16vw" buttonText={"Mint"} buttonFunction={mintNFT} width="40vw" height="200px" title="Buy more via Crypto-" titleFontSize="18px" content={"Mint an NFT"} contentFontSize="30px" />
+                <Cards width="31vw" height="13vw" title="Unstaked NFTs" titleFontSize="1vw" content={" " + (nnft - nstakednfts)+ " NFTs"} contentFontSize="2vw" />
+                <CardX buttonMargin="6vw" buttonText={"Mint"} buttonFunction={mintNFT} width="31vw" height="13vw" title="Buy more via Crypto-" titleFontSize="1vw" content={"Mint an NFT"} contentFontSize="2vw" />
               </>
             ) : (
               <>
-                <CardX buttonMargin="13vw" buttonText={"Stake NFTs"} buttonFunction={stakeNFTs} width="30vw" height="200px" title="Unstaked NFTs" titleFontSize="18px" content={" " + (nnft - nstakednfts)} contentFontSize="40px" />
-                <CardX buttonMargin="6vw" buttonText={"Mint"} buttonFunction={mintNFT} width="30vw" height="200px" title="Buy more via Crypto-" titleFontSize="18px" content={"Mint an NFT"} contentFontSize="30px" />
+                <CardX buttonMargin="7vw" buttonText={"Stake NFTs"} buttonFunction={stakeNFTs} width="32vw" height="13vw" title="Unstaked NFTs" titleFontSize="1vw" content={" " + (nnft - nstakednfts)+ " NFTs"} contentFontSize="2vw" />
+                <CardX buttonMargin="7vw" buttonText={"Mint"} buttonFunction={mintNFT} width="32vw" height="13vw" title="Buy more via Crypto-" titleFontSize="1vw" content={"Mint an NFT"} contentFontSize="2vw" />
               </>
             )
           }

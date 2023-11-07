@@ -6,18 +6,25 @@ const Cards = ({ width, height, title, titleFontSize, content, contentFontSize }
     const cardStyle = {
         width: width,
         height: height,
+        margin: "1vw",
+        borderRadius: "3vw"
+
     };
 
     const titleStyle = {
+        // fontFamily: 'Source Sans Pro sans-serif',
         fontSize: titleFontSize,
+        marginBottom: "0.5vw",
+        // fontWeight: "1100"
     };
 
     const contentStyle = {
         fontSize: contentFontSize,
     };
 
+
     return (
-        <div className="card" style={cardStyle}>
+        <div className="card" style={ cardStyle }>
             <div className="content">
                 <h2 style={titleStyle}>{title}</h2>
                 <p style={contentStyle}>{content}</p>
